@@ -29,7 +29,7 @@
 
             jobs_Study() {
                 // TODO
-                alert("正在施工");
+                this.$router.push({ path:'/job_studying' });
             },
 
             cases_View() {
