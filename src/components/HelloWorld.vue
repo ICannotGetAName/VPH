@@ -1,7 +1,7 @@
 <template>
 <div id="top">
     <div id="header" class="flex">
-        <h1>虚拟宠物医院v0.3</h1>
+        <h1>虚拟宠物医院v0.4</h1>
     </div>
 
     <div id="section" style="text-align: center;" class="flex">
