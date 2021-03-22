@@ -61,6 +61,8 @@
 
 <script>
 import {hex_sha256} from '../../static/js/sha.js'
+import {register, login} from '@/api/user.js'
+
 export default {
   name: 'HelloWorld',
   data() {
@@ -76,7 +78,17 @@ export default {
             // TODO: 删除下面的alert 更改条件判断 加入帐号密码查询
             alert("Sending Request for account: " + account + ", hashed password: " + hashed_pwd);
             if (true) {
-                this.$router.push({ path:'/function_page' });
+                let data = {}
+                data['username'] = account;
+                data['password'] = hashed_pwd;
+                login(data).then((res) => {
+                    alert("登录成功");
+                    this.$router.push({ path:'/function_page' });
+                }).catch((err) => {
+                    alert("不对劲");
+                });
+
+                
             } else {
                 alert("帐号或密码错误");
             }
@@ -89,6 +101,19 @@ export default {
             if (password1 == password2) {
                 var hashed_pwd = hex_sha256(password1);
                 alert("Sending Request for new account: " + account + ", hashed password: " + hashed_pwd);
+                
+                let data = {}
+                let user = {}
+                user['username'] = account;
+                user['password'] = hashed_pwd;
+                user['email'] = '1234567@qq.com';
+                user['school'] = 'ecnu';
+                data['user'] = user;
+                register(data).then((res) => {
+                    //res.data.
+                }).catch((err) => {
+                    alert("不对劲");
+                });
             } else {
                 alert("两次密码不匹配");
             }
