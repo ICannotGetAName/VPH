@@ -25,7 +25,7 @@
             <input id="login_password_input" type="password">
             <br /><br />
 
-            <div style="text-align: center; horizontal-align" class="horizontal fullwidth">
+            <div style="text-align: center; horizo/#/casesntal-align" class="horizontal fullwidth">
                 <div style="text-align: left" class="horizontal halfwidth">
                     <el-button icon="el-icon-arrow-left" circle @click="showMain()"></el-button>
                 </div>
@@ -108,7 +108,7 @@ export default {
                 user['school'] = 'ecnu';
                 data['user'] = user;
                 register(data).then((res) => {
-                    //res.data.
+                    alert("注册成功");
                 }).catch((err) => {
                     alert("不对劲");
                 });

@@ -36,6 +36,7 @@
                 menu_list: [
                     [], // 一级目录
                     [], // 二级目录
+                    []  // 三级目录
                 ],
                 content: "欢迎使用病例查询功能，这是主界面，可以在左侧选择病例",
                 header_text: "病例查询"
@@ -67,6 +68,10 @@
                     this.getSndMenuList(id);
                 } else if (this.current_layer == 1) {
                     this.content = `这是id为${id}的二级列表的介绍数据`;
+                    ++this.current_layer;
+                    this.getTrdMenuList(id1, id2);
+                } else if (this.current_layer == 2) {
+                    this.content = `这是id为${id}的三级列表的介绍数据`;
                 }
             },
 
@@ -98,6 +103,15 @@
                     ];
                 } else {
                     this.menu_list[1] = [];
+                }
+            },
+
+            getTrdMenuList(id1, id2) {
+                if (id1 == 1 && id2 == 1) {
+                    this.menu_list[2] = [
+                        {id: 1, item_name: "病例1"},
+                        {id: 2, item_name: "病例2"}
+                    ];
                 }
             },
 
