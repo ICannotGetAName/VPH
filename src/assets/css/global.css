@@ -25,6 +25,7 @@ body,
     background-color: darkorange;
     background-image: url(../background.jpeg);
     background-repeat: no-repeat;
+    background-size: 100% 100%;
     color: rgb(40, 40, 40);
     font-family: 'Times New Roman', Times, serif;
     font-size: x-large;
