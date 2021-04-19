@@ -146,6 +146,9 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 
 <style scoped>
+#buttons {
+    margin-top: 20px;
+}
 
 .login_button {
     display: inline-block;
@@ -160,6 +163,7 @@ export default {
     transition: all 0.5s;
     cursor: pointer;
     margin: 5px;
+
 }
 
 .login_button span {

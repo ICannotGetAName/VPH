@@ -4,7 +4,7 @@
         <h1>{{ header_text }}</h1>
     </div>
 
-    <div id="section">
+    <div id="case_section">
         <div id="side_bar" class="horizontal">
             <div id="button_bar">
                 <!-- 一级目录按钮 -->
@@ -137,7 +137,7 @@
     margin: auto;
 }
 
-#section {
+#case_section {
     width: 100%;
     height: 85%;
 }
