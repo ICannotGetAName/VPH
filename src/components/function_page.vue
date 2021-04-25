@@ -24,6 +24,7 @@
         methods: {
             rooms_View() {
                 // TODO
+                this.$router.push('/hospitalNav')
                 alert("正在施工");
             },
 

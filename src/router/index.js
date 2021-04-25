@@ -35,7 +35,7 @@ export default new Router({
     },
 
     {
-        path: '/hospital_nav',
+        path: '/hospitalNav',
         name: 'hospital_nav',
         component: hospitalNav
     }
