@@ -7,12 +7,17 @@
         <div class="list_l">
             <ul class="navList">
                 <li v-for="room in rooms" v-bind:key="index">
-                    <a href="#" class="room">{{room.roomName}}</a>
+                    <a v-bind:href="roomUrl" class="room">{{room.roomName}}</a>
                 </li>
             </ul>
         </div>
         <div class="map_r">
-            
+            <div class="roomPic">
+                <img src="../assets/map.jpg" alt="医院地图" width="860" height="500" class="pic">
+            </div>
+            <div class="intro">
+                <p class="info">医院地图总览</p>
+            </div>
         </div>
     </div>
     
@@ -51,6 +56,7 @@
 <style>
 .list_l {
     width: 20%;
+    float: left;
 }
 .navList {
     list-style-type: none;
@@ -83,5 +89,10 @@
 }
 .map_r {
     width: 80%;
+    float: left;
+}
+
+.pic {
+    margin: 20 auto;
 }
 </style>
