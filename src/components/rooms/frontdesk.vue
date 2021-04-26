@@ -26,7 +26,7 @@
 
 <script>
     export default {
-        name: 'hospitalNav',
+        name: 'frontdesk',
         data() {
             return {
                 rooms: [
@@ -40,7 +40,7 @@
                     {roomName: '药房', url: '#/rooms/drug'},
                     {roomName: '注射室', url: '#/rooms/inject'},
                     {roomName: '手术准备室', url: '#/rooms/prepare'},
-                    {roomName: '手术室', url: '#/rooms/opreation'},
+                    {roomName: '手术室', url: '#/rooms/operation'},
                     {roomName: '住院部', url: '#/rooms/stay'},
                     {roomName: '病理剖析室', url: '#/rooms/examine'},
                     {roomName: '档案室', url: '#/rooms/document'},
@@ -57,8 +57,9 @@
 
         methods: {
             getInfo() {
-                this.info = '医院地图总览';
-                this.picsrc = require('../assets/map.jpg');
+                this.info = '这是前台';
+                this.picsrc = require('../../assets/map.jpg');
+                this.picsrc = 'https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png';
             }
         }
     }
