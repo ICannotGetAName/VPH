@@ -130,7 +130,17 @@ export default {
   width: 80%;
   float: left;
 }
-
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-size: 18px;
+    line-height: 32px;
+    padding-left: 4em;
+    padding-right: 4em;
+}
 .pic {
   margin: 20 auto;
 }
