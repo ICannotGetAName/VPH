@@ -25,7 +25,7 @@
         <div class="roomPic">
           <img
             :src="picsrc"
-            alt="病例图片"
+            alt="前台学习"
             width="860"
             height="500"
             class="pic"
@@ -38,7 +38,7 @@
 </template>
 
 <script>
-import { getCases } from "@/api/cases";
+import { getDiseases } from "@/api/cases";
 export default {
   name: "cases",
   data() {
@@ -48,8 +48,8 @@ export default {
         [], // 一级目录
         [] // 二级目录
       ],
-      content: "欢迎使用病例查询功能，这是主界面，可以在左侧选择病例",
-      header_text: "病例查询",
+      content: "我是兽医，我爱学习",
+      header_text: "疾病学习：兽医",
       cases_map: {},
       picsrc: "localhost"
     };
@@ -64,7 +64,7 @@ export default {
       this.$router.push("/function_page");
     },
     getFstMenuList() {
-      getCases()
+      getDiseases()
         .then(res => {
           console.log("cases: ", res);
           this.cases_map = res.data.data.data;
